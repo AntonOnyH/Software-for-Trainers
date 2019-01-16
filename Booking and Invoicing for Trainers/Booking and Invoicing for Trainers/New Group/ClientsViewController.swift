@@ -14,6 +14,22 @@ class ClientsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        clientListTableView.delegate = self
+        clientListTableView.dataSource = self
     }
 }
 
+extension ClientsViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = clientListTableView.dequeueReusableCell(withIdentifier: "clientListCell", for: indexPath)
+        let nameLabel = cell.contentView.viewWithTag(1)as! UILabel
+        nameLabel.text = "frikkie"
+        return cell
+    }
+    
+    
+}
