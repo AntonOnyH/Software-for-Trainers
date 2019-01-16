@@ -80,12 +80,12 @@
 			isa = PBXGroup;
 			children = (
 				779D2B0021EF69B900655A18 /* AppDelegate.swift */,
-				779D2B0221EF69B900655A18 /* ClientsViewController.swift */,
-				779D2B0421EF69B900655A18 /* Main.storyboard */,
 				779D2B0A21EF69BB00655A18 /* Assets.xcassets */,
-				779D2B0C21EF69BB00655A18 /* LaunchScreen.storyboard */,
 				779D2B0F21EF69BB00655A18 /* Info.plist */,
 				779D2B0721EF69B900655A18 /* Booking_and_Invoicing_for_Trainers.xcdatamodeld */,
+				779D2B2821EF6DE400655A18 /* ViewModels */,
+				779D2B2621EF6D7700655A18 /* ViewControllers */,
+				779D2B2721EF6D9800655A18 /* StoryBoards */,
 			);
 			path = "Booking and Invoicing for Trainers";
 			sourceTree = "<group>";
@@ -97,6 +97,33 @@
 				779D2B1A21EF69BB00655A18 /* Info.plist */,
 			);
 			path = "Booking and Invoicing for TrainersTests";
+			sourceTree = "<group>";
+		};
+		779D2B2621EF6D7700655A18 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				779D2B0221EF69B900655A18 /* ClientsViewController.swift */,
+			);
+			name = ViewControllers;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		779D2B2721EF6D9800655A18 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				779D2B0C21EF69BB00655A18 /* LaunchScreen.storyboard */,
+				779D2B0421EF69B900655A18 /* Main.storyboard */,
+			);
+			name = StoryBoards;
+			path = "New Group1";
+			sourceTree = "<group>";
+		};
+		779D2B2821EF6DE400655A18 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ViewModels;
+			path = "New Group2";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
