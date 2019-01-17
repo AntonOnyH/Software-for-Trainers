@@ -11,13 +11,28 @@ import UIKit
 class ClientsViewController: UIViewController {
     
     @IBOutlet weak var clientListTableView: UITableView!
+    @IBOutlet weak var addClientButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         clientListTableView.delegate = self
         clientListTableView.dataSource = self
     }
-}
+    
+    @IBAction func addClientButtonTapped(_ sender: UIBarButtonItem) {
+           let alertController = UIAlertController.init(title: "Add Client", message: "", preferredStyle: .alert)
+        alertController.addTextField { (nameTextField) in
+            nameTextField.placeholder = "Name"
+        }
+        alertController.addAction(.init(title: "SAVE", style: .default, handler: { (_) in
+            print("Name is saved")
+        }))
+        present(alertController, animated: true)
+    }
+        }
+
+    
+
 
 extension ClientsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
