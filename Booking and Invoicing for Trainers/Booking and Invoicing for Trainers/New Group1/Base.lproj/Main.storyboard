@@ -13,15 +13,18 @@
         <!--Clients List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ClientsViewController" customModule="Booking_and_Invoicing_for_Trainers" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dOT-ad-0wJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BackGround1" translatesAutoresizingMaskIntoConstraints="NO" id="snw-pg-eEd">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" alpha="0.29999999999999999" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dOT-ad-0wJ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="0.10090513754045308" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" tag="1" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="clientListCell" id="SD8-dh-cxv">
                                         <rect key="frame" x="0.0" y="28" width="375" height="60"/>
@@ -32,9 +35,9 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oh0-m1-FFd">
                                                     <rect key="frame" x="15" y="11" width="345" height="38"/>
-                                                    <color key="backgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="25"/>
+                                                    <color key="textColor" red="0.14337116168574704" green="1" blue="0.96794703270746485" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -50,16 +53,24 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" image="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="dOT-ad-0wJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0X0-Wx-NDw"/>
+                            <constraint firstItem="snw-pg-eEd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1zN-L0-Ti2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dOT-ad-0wJ" secondAttribute="trailing" id="A3I-eb-Ll2"/>
+                            <constraint firstItem="snw-pg-eEd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TkN-zN-A4x"/>
                             <constraint firstItem="dOT-ad-0wJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VYi-dI-dZQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="snw-pg-eEd" secondAttribute="trailing" id="ctu-ue-vUc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="dOT-ad-0wJ" secondAttribute="bottom" id="eOp-mB-qe8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="snw-pg-eEd" secondAttribute="bottom" id="r5j-KA-zwe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Clients List" id="0lF-fC-ei7">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="spB-1U-UdT">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <action selector="addClientButtonTapped:" destination="BYZ-38-t0r" id="35W-06-JmV"/>
                             </connections>
@@ -70,6 +81,7 @@
                         <outlet property="clientListTableView" destination="dOT-ad-0wJ" id="6SB-ck-pKg"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1062" y="134"/>
         </scene>
@@ -92,4 +104,7 @@
             <point key="canvasLocation" x="418" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BackGround1" width="3360" height="5040"/>
+    </resources>
 </document>
